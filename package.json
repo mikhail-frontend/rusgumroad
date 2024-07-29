@@ -1,0 +1,41 @@
+{
+  "name": "rusgumroad",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "rimraf out && rimraf .next && next build && next export",
+    "start": "next start",
+    "lint": "next lint",
+    "prod": "yarn build"
+  },
+  "browserslist": [
+    "defaults and supports es6-module",
+    "not IE 11",
+    "not IE_Mob 11",
+    "maintained node versions"
+  ],
+  "dependencies": {
+    "@next/font": "13.1.1",
+    "@types/node": "18.11.18",
+    "@types/react": "18.0.26",
+    "@types/react-dom": "18.0.10",
+    "eslint": "8.30.0",
+    "eslint-config-next": "13.1.1",
+    "firebase-tools": "^12.4.0",
+    "next": "^14.2.5",
+    "next-pwa": "^5.6.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-responsive-masonry": "^2.1.7",
+    "react-schemaorg": "^2.0.0",
+    "schema-dts": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/react-responsive-masonry": "^2.1.0",
+    "rimraf": "^3.0.2",
+    "sass": "^1.57.1",
+    "sass-loader": "^13.2.0",
+    "typescript": "^5.5.4"
+  }
+}
