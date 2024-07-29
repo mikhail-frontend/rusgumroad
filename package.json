@@ -7,7 +7,7 @@
     "build": "rimraf out && rimraf .next && next build",
     "start": "npx serve out",
     "lint": "next lint",
-    "prod": "yarn build"
+    "prod": "yarn build && firebase deploy --only hosting"
   },
   "browserslist": [
     "defaults and supports es6-module",
