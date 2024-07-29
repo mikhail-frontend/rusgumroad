@@ -5,11 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "rimraf out && rimraf .next && next build",
-    "start": "next start",
+    "start": "npx serve out",
     "lint": "next lint",
     "prod": "yarn build"
   },
-
   "browserslist": [
     "defaults and supports es6-module",
     "not IE 11",
@@ -37,6 +36,7 @@
     "rimraf": "^3.0.2",
     "sass": "^1.57.1",
     "sass-loader": "^13.2.0",
+    "serve": "^14.2.3",
     "typescript": "^5.5.4"
   }
 }
