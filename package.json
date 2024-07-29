@@ -4,11 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "rimraf out && rimraf .next && next build && next export",
+    "build": "rimraf out && rimraf .next && next build",
     "start": "next start",
     "lint": "next lint",
     "prod": "yarn build"
   },
+
   "browserslist": [
     "defaults and supports es6-module",
     "not IE 11",

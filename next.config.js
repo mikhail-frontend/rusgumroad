@@ -9,4 +9,5 @@ module.exports = withPWA({
     loader: 'akamai',
     path: '',
   },
+  output: 'export',
 });

@@ -6,7 +6,7 @@ type LayoutType = {
 
 const Layout: React.FC<LayoutType> = ({ children }) => {
     return (
-        <div>
+        <div className={'layout'}>
             {children}
         </div>
     );
