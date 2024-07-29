@@ -1,15 +1,14 @@
 import React from 'react';
 
 type LayoutType = {
-    children: React.ReactNode,
+    children: React.ReactNode;
 }
-const Layout = ({children}) => {
+
+const Layout: React.FC<LayoutType> = ({ children }) => {
     return (
-        <>
-            <div>
-                {children}
-            </div>
-        </>
+        <div>
+            {children}
+        </div>
     );
 };
 
