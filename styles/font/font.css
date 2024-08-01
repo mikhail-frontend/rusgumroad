@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Mabry Pro';
+    src: url('MabryPro-Bold.eot');
+    src: url('MabryPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('MabryPro-Bold.woff2') format('woff2'),
+        url('MabryPro-Bold.woff') format('woff'),
+        url('MabryPro-Bold.ttf') format('truetype'),
+        url('MabryPro-Bold.svg#MabryPro-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mabry Pro';
+    src: url('MabryPro-Medium.eot');
+    src: url('MabryPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('MabryPro-Medium.woff2') format('woff2'),
+        url('MabryPro-Medium.woff') format('woff'),
+        url('MabryPro-Medium.ttf') format('truetype'),
+        url('MabryPro-Medium.svg#MabryPro-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mabry Pro';
+    src: url('MabryPro-Regular.eot');
+    src: url('MabryPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('MabryPro-Regular.woff2') format('woff2'),
+        url('MabryPro-Regular.woff') format('woff'),
+        url('MabryPro-Regular.ttf') format('truetype'),
+        url('MabryPro-Regular.svg#MabryPro-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

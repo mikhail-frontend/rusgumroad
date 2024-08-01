@@ -1,0 +1,36 @@
+@import "./font/font.css";
+
+* {
+  font-family: 'Mabry Pro', sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+button,
+textarea {
+  appearance: none;
+}
+
+* {
+  &::-webkit-scrollbar-track {
+    background-color: rgba(245, 245, 245, 0.71);
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    background-color: rgba(245, 245, 245, 0.71);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(127, 143, 164, 0.34);
+    border-radius: 5px;
+  }
+}
