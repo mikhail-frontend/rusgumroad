@@ -49,7 +49,7 @@ html, body {
 }
 
 .container {
-  width: 1173px;
+  width: 1160px;
   margin-left: auto;
   margin-right: auto;
   max-width: calc(100vw - 40px);
@@ -65,11 +65,13 @@ html, body {
 }
 
 .heading {
-  font-weight: 600;
-  font-size: 56px;
-  line-height: 1.17;
-  letter-spacing: -0.02em;
-  color: #FFFFFF;
+  color: #fff;
+  font-size: 46px;
+  font-weight: 500;
+  line-height: 65.52px;
+  letter-spacing: -1.12px;
+  text-align: left;
+
   @media (max-width: 1200px) {
     font-size: 45px;
   }
@@ -77,16 +79,13 @@ html, body {
     font-size: 40px;
   }
   @media (max-width: 767px) {
-    font-size: 35px;
-    line-height: 45px;
-  }
-  @media (max-width: 767px) {
-    font-size: 28px;
-    line-height: 35px;
+
+    font-size: 36px;
+    line-height: 42px;
   }
   @media (max-width: 380px) {
-    font-size: 25px;
-    line-height: 33px;
+    font-size: 30px;
+    line-height: 36px;
   }
 }
 
@@ -95,20 +94,10 @@ a {
 }
 
 ::selection {
-  background: #5b60e5;
+  background: rgb(255, 144, 231);
   color: #fff;
 }
 
-.unreal-t {
-  @media (max-width: 600px) {
-    font-size: 33px !important;
-    line-height: 42px !important;
-  }
-  @media (max-width: 350px) {
-    font-size: 28px !important;
-    line-height: 35px !important;
-  }
-}
 
 @import "RippleButton";
 @import "BurgerMenu";

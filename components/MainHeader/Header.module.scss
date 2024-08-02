@@ -86,12 +86,13 @@
   }
 
   &:hover {
-    background: linear-gradient(90deg, #4460B0 0%, #4C50BE 30.73%, #5F4BD0 100%) !important;
+    //    background: linear-gradient(90deg, rgb(255, 144, 231) 0%, rgb(225, 126, 203) 30.73%, rgb(252, 122, 213) 100%) !important;
+    background: linear-gradient(90deg,  rgb(255, 144, 231) 0%, rgb(225, 126, 203) 30.73%, rgb(252, 122, 213) 100%) !important;
     transform: scale(1.02);
   }
 
   &.headerMainBtn {
-    background: linear-gradient(90deg, #4460B0 0%, #4C50BE 30.73%, #5F4BD0 100%) !important;
+    background: linear-gradient(90deg,  rgb(255, 144, 231) 0%, rgb(225, 126, 203) 30.73%, rgb(252, 122, 213) 100%) !important;
   }
 
   @media (max-width: 1000px) {

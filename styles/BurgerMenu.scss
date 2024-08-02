@@ -14,7 +14,7 @@
 
 .menu-bg {
   @extend .menu;
-  background: linear-gradient(90deg, #4460B0 0%, #4C50BE 30.73%, #5F4BD0 100%);;
+  background: linear-gradient(90deg,  rgb(255, 144, 231) 0%, rgb(225, 126, 203) 30.73%, rgb(252, 122, 213) 100%);;
   pointer-events: none;
   transition: .3s;
   right: 39px;
