@@ -1,6 +1,7 @@
 import React from 'react';
 import SiteHead from "../components/SiteHead";
 import MainHeader from "../components/MainHeader";
+import MainFooter from "../components/MainFooter";
 
 type LayoutType = {
     children: React.ReactNode;
@@ -11,10 +12,9 @@ const Layout: React.FC<LayoutType> = ({children}) => {
     return (
         <>
             <SiteHead/>
-            <div className={'layout'}>
-                <MainHeader/>
-                {children}
-            </div>
+            <MainHeader/>
+            {children}
+            <MainFooter/>
         </>
 
     );
