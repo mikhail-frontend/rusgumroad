@@ -1,0 +1,19 @@
+.descriptionLine {
+  padding-top: 2.5px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid rgba(180, 188, 208, 0.2);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  svg{
+    margin-right: 6px;
+  }
+  @media (max-width: 900px) {
+    padding-bottom: 10px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}

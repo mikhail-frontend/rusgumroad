@@ -1,0 +1,133 @@
+.accordionSection {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 17px;
+  &:last-of-type{
+    margin-bottom: 0;
+  }
+  @media (max-width: 1200px) {
+    margin-bottom: 15px;
+  }
+}
+.accordion {
+  height: 76px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  outline: none;
+  transition: background-color 0.2s ease;
+  position: relative;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: #F7F8F8;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 24px 55px 24px 24px ;
+  &:after {
+    content: '';
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    width: 22px;
+    height: 2px;
+    margin-top: -2px;
+    background-color: #fff;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    width: 22px;
+    height: 2px;
+    margin-top: -2px;
+    background-color: #fff;
+    transform: rotate(-90deg);
+    transition: transform 0.35s cubic-bezier(0.65, 0.05, 0.36, 1);
+  }
+  &:hover{
+    transform: none;
+  }
+  @media (max-width: 1200px) {
+    font-size: 18px;
+    line-height: 1.4;
+    padding: 20px 55px 20px 20px ;
+  }
+  @media (max-width: 900px) {
+    height: 65px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 16px;
+  }
+  @media (max-width: 767px) {
+    min-height: 88px;
+    height: auto;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: #F7F8F8;
+    padding-left: 15px;
+    h3{
+      font: inherit;
+    }
+  }
+  @media (max-width: 370px) {
+    font-size: 16px;
+    line-height: 25px;
+    min-height: 65px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+.active {
+  background-color: #4C50BE ;
+}
+
+.accordion_icon {
+  margin-left: auto;
+  transition: transform 0.2s ease;
+}
+.accordion_content {
+  background: linear-gradient(358.98deg, rgba(247, 248, 248, 0.05) 1.12%, rgba(247, 248, 248, 0) 99.39%);
+  overflow: hidden;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  /* or 150% */
+  padding-left: 24px;
+  padding-right: 24px;
+
+  color: #FFFFFF;
+  transition: max-height 0.2s ease;
+  @media (max-width: 767px) {
+    padding-left: 15px;
+    padding-right: 16px;
+    font-size: 0;
+    line-height: 24px;
+  }
+}
+.accordion_text {
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px;
+  *{
+    font: inherit;
+  }
+  h2 {
+    display: inline;
+  }
+}
+.accordionSection.isActive {
+  .accordion_content {
+    opacity: 1;
+  }
+  .accordion {
+    &:before {
+      transform: rotate(0deg);
+    }
+  }
+}
