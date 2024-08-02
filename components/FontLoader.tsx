@@ -7,7 +7,7 @@ const FontLoader: React.FC = () => {
         WebFont.load({
             custom: {
                 families: ['Mabry Pro'],
-                urls: ['/styles/fonts/font.css'],
+                urls: ['/font/font.css'],
             },
         });
     }, []);

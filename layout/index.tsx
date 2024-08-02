@@ -1,13 +1,15 @@
 import React, {useEffect} from 'react';
-import { useSelector } from 'react-redux';
-import { RootState } from '../store';
+import {useSelector} from 'react-redux';
+import {RootState} from '../store';
+import SiteHead from "../components/SiteHead";
+
 type LayoutType = {
     children: React.ReactNode;
 }
 
-const Layout: React.FC<LayoutType> = ({ children }) => {
+const Layout: React.FC<LayoutType> = ({children}) => {
     const theme = useSelector((state: RootState) => state.theme.mode);
-    const { usd, eur, status, error } = useSelector((state: RootState) => state.currency);
+    const {usd, eur, status, error} = useSelector((state: RootState) => state.currency);
     useEffect(() => {
         console.log({
             theme, usd, eur
@@ -15,7 +17,9 @@ const Layout: React.FC<LayoutType> = ({ children }) => {
     }, []);
 
     return (
-        <div className={'layout'}>
+        <>
+            <SiteHead/>
+            <div className={'layout'}>
               <pre>
       {`Theme: ${theme}\n`}
                   {`USD: ${usd}\n`}
@@ -23,8 +27,10 @@ const Layout: React.FC<LayoutType> = ({ children }) => {
                   {`Status: ${status}\n`}
                   {`Error: ${error}\n`}
     </pre>
-            {children}
-        </div>
+                {children}
+            </div>
+        </>
+
     );
 };
 
