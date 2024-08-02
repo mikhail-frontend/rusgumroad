@@ -92,10 +92,10 @@ const SiteHead: React.FC = () => {
                 <link rel="apple-touch-icon" href="/icons/apple-touch-icon-152x152.png" sizes="152x152" />
                 <link rel="apple-touch-icon" href="/icons/apple-touch-icon-180x180.png" sizes="180x180" />
                 <JsonLd<Organization>
-                    item={organization as unknown as Graph}
+                    item={organization as any}
                 />
                 <JsonLd<Dataset>
-                    item={dataset as unknown as Graph}
+                    item={dataset as any}
                 />
             </Head>
             <Script type="text/javascript" strategy="lazyOnload" id="yandex" async defer>
