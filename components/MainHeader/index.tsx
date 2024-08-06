@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {useSelector} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
 import {RootState} from "../../store";
 import Logo from "../Logo";
 import RippleButton from "../UI/RippledButton";
@@ -53,7 +53,7 @@ const MainHeader = () => {
     const [links] = useState<Link[]>(LinksList);
     const isMobile = useMobile();
     const theme = useSelector((state: RootState) => state.theme.mode);
-
+    const setTheme = useDispatch()
     const scrollToElement = (blockPath:string) => {
         if(isMobile) {
             const element: HTMLElement | null = document.getElementById(blockPath);
@@ -105,6 +105,12 @@ const MainHeader = () => {
                             </RippleButton>
                         )
                     })}
+                </div>
+                <div className={`${styles.headerSwitch}`}>
+                    <div className={`${styles.moon}`}>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src="/moon.svg" alt="moon"/>
+                    </div>
                 </div>
                 <BurgerMenu onClick={buttonClickHandler}/>
             </div>
