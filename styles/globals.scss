@@ -57,10 +57,16 @@ html, body {
     max-width: calc(100vw - 30px);
   }
   @media (max-width: 767px) {
-    max-width: calc(100vw - 50px);
+    max-width: calc(100vw - 48px);
   }
   @media (max-width: 370px) {
     max-width: calc(100vw - 40px);
+  }
+  @media (max-width: 360px) {
+    max-width: calc(100vw - 36px);
+  }
+  @media (max-width: 330px) {
+    max-width: calc(100vw - 24px);
   }
 }
 

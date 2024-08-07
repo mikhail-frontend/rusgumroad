@@ -6,9 +6,13 @@
   text-align: center;
   border-radius: 100%;
   right: 25px;
-  top: 25px;
+  top: 44px;
   @media (min-width: 768px) {
     display: none;
+  }
+  @media (max-width: 470px) {
+    right: 28px;
+    top: 39px;
   }
 }
 
@@ -18,7 +22,7 @@
   pointer-events: none;
   transition: .3s;
   right: 39px;
-  top: 25px;
+  top: 44px;
   transform: translate3d(50%, -50%, 0);
   transform-origin: center center;
   width: 30px;
@@ -34,6 +38,10 @@
   @media (min-width: 768px) {
     display: none;
   }
+  @media (max-width: 470px) {
+    right: 34px;
+    top: 39px;
+  }
 }
 
 .menu-burger {
@@ -44,7 +52,7 @@
   transition: .4s;
   transform-origin: center;
   font-size: 23px;
-  top: 17px;
+  top: 36px;
   right: 19px;
   line-height: 1;
   &.fs {
@@ -52,6 +60,10 @@
   }
   @media (min-width: 768px) {
     display: none;
+  }
+  @media (max-width: 470px) {
+    right: 22px;
+    top: 31px;
   }
 }
 
@@ -112,15 +124,17 @@
     position: absolute;
     left: 10px;
     top: 0;
+    @media (max-width: 470px) {
+      left: 18px;
+    }
   }
 
   label span {
-    background: #fff;
+    background: #000;
     border-radius: 10px;
     height: 2px;
     margin: 1.5px 0;
     transition: .4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
-
   }
 
 
@@ -159,11 +173,9 @@
 
 
   input[type="checkbox"]:checked ~ span:nth-of-type(3) {
-
     transform-origin: bottom;
     width: 50%;
     transform: translate(8px, -2px) rotatez(45deg);
-
   }
 
 }
