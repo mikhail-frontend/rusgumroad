@@ -1,0 +1,21 @@
+.rippleContainer {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 0.24s linear;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}

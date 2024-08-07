@@ -5,6 +5,7 @@ import Logo from "../Logo";
 import RippleButton from "../UI/RippledButton";
 import styles from './Header.module.scss';
 import BurgerMenu from "../UI/BurgerMenu/BurgerMenu";
+import GumroadButton from "../UI/GumroadButton/GumroadButton";
 import {useRouter} from 'next/router';
 import useMobile from "../../hooks/useMobile";
 import { setTheme } from '../../store/slices/themeSlice';
@@ -92,6 +93,9 @@ const MainHeader = () => {
                     </div>
                 </div>
                 <BurgerMenu onClick={buttonClickHandler}/>
+                <GumroadButton>
+                    Задать вопрос
+                </GumroadButton>
             </div>
         </header>
     );

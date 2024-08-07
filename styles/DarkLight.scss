@@ -1,7 +1,10 @@
-body.light{
-  background: rgb(244, 245, 240);
-}
-
-body.dark{
-  background: rgb(36, 36, 35);
+.wrapper{
+  &.light{
+    background: rgb(244, 245, 240);
+    color: #000;
+  }
+  &.dark{
+    background: rgb(36, 36, 35);
+    color: #fff;
+  }
 }

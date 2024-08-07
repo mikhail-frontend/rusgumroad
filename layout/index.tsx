@@ -2,6 +2,8 @@ import React from 'react';
 import SiteHead from "../components/SiteHead";
 import MainHeader from "../components/MainHeader";
 import MainFooter from "../components/MainFooter";
+import {useSelector} from "react-redux";
+import {RootState} from "../store";
 
 type LayoutType = {
     children: React.ReactNode;
@@ -9,13 +11,15 @@ type LayoutType = {
 
 const Layout: React.FC<LayoutType> = ({children}) => {
     // const {usd, eur, status, error} = useSelector((state: RootState) => state.currency);
+    const theme = useSelector((state: RootState) => state.theme.mode);
+
     return (
-        <>
+        <div className={`wrapper ${theme === 'light' ? 'light' : 'dark'}`}>
             <SiteHead/>
             <MainHeader/>
             {children}
             <MainFooter/>
-        </>
+        </div>
 
     );
 };
