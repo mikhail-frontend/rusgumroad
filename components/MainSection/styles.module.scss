@@ -1,43 +1,221 @@
+.container {
+  width: 100%;
+  min-height: 425px;
+  position: relative;
+  padding: 45px;
+  max-width: calc(100vw - 40px);
+  margin-left: auto;
+  margin-right: auto;
+  @media (max-width: 900px) {
+    max-width: calc(100vw - 30px);
+  }
+  @media (max-width: 767px) {
+    padding: 0;
+    max-width: calc(100vw - 48px);
+  }
+  @media (max-width: 370px) {
+    max-width: calc(100vw - 40px);
+  }
+  @media (max-width: 360px) {
+    max-width: calc(100vw - 36px);
+  }
+  @media (max-width: 330px) {
+    max-width: calc(100vw - 24px);
+  }
+}
+
 .main {
   width: 947px;
   max-width: 100%;
-  margin-left: 19px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 19px;
   height: 502px;
-  margin-top: 22px;
-  position: relative;
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  @media (max-width: 1200px) {
+    padding-left: 0;
+    height: 460px;
+  }
+  @media (max-width: 800px) {
+    height: 430px;
+  }
+}
 
+.mainText {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 58px;
+  letter-spacing: 0;
+  text-align: center;
+  margin-bottom: 54.5px;
+  @media (max-width: 1024px) {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media (max-width: 900px) {
+    margin-bottom: 26px;
+  }
+  @media (max-width: 600px) {
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 23px;
+  }
+}
+
+h1.mainTitle {
+  display: inline;
+  font: inherit;
+  font-weight: 700 !important;
+  color: rgb(255, 144, 231);
+  text-transform: uppercase;
 }
 
 .coin {
   object-fit: contain;
+  position: absolute;
+  @media (max-width: 650px) and (min-width: 470px) {
+    transform: scale(.7);
+    transform-origin: center center;
+  }
 }
 
 .coin1 {
   width: 81px;
   height: 96px;
+  left: 37%;
+  top: 4%;
+  @media (max-width: 1450px) {
+    left: 34%;
+    top: 2%;
+  }
+  @media (max-width: 1200px) {
+    width: 74.06px;
+    height: 87.78px;
+    left: 25%;
+    top: 3%;
+  }
+  @media (max-width: 1024px) {
+    left: 31%;
+    top: 3%;
+  }
+
+  @media (max-width: 800px) {
+    left: 33%;
+    top: 8%;
+  }
+
+  @media (max-width: 740px) {
+    left: 31%;
+    top: 3%;
+  }
 }
 
 .coin2 {
   width: 75px;
   height: 76px;
+  right: 30%;
+  top: 9%;
+  @media (max-width: 1450px) {
+    right: 20%;
+    top: 7%;
+  }
+  @media (max-width: 1200px) {
+    width: 68.58px;
+    height: 69.49px;
+    right: 35px;
+    top: 5%;
+  }
+
+  @media (max-width: 800px) {
+    top: 9%;
+  }
+  @media (max-width: 740px) {
+    top: 5%;
+    right: 30px;
+  }
 }
 
 .coin3 {
   width: 124px;
   height: 131px;
+  top: 55.5%;
+  right: 24%;
+  @media (max-width: 1450px) {
+    top: unset;
+    bottom: 14%;
+    right: 10%;
+  }
+  @media (max-width: 1200px) {
+    width: 113.38px;
+    height: 119.78px;
+    bottom: 14%;
+    right: 14px;
+  }
+  @media (max-width: 740px) {
+    bottom: 10%;
+    right: 12px;
+  }
+
 }
 
 .coin4 {
   width: 147px;
   height: 148px;
+  left: 29%;
+  top: 375.5px;
+  @media (max-width: 1450px) {
+    top: unset;
+    left: 20%;
+    bottom: -2%;
+  }
+  @media (max-width: 1200px) {
+    width: 134.41px;
+    height: 135.32px;
+    left: 146px;
+    bottom: -4%;
+  }
+  @media (max-width: 1024px) {
+    left: 100px;
+  }
+
+  @media (max-width: 740px) {
+    left: 75px;
+    bottom: -6%;
+  }
 }
 
 .coin5 {
   width: 96px;
   height: 82px;
+  left: 15%;
+  top: 179.5px;
+  @media (max-width: 1450px) {
+    left: 5%;
+  }
+  @media (max-width: 1200px) {
+    width: 87.78px;
+    height: 74.98px;
+    left: 0;
+    top: 40%;
+  }
+  @media (max-width: 1024px) {
+    left: -30px;
+  }
+
+  @media (max-width: 800px) {
+    left: -56px;
+  }
+  @media (max-width: 740px) {
+    left: -70px;
+  }
 }
 
-.button{
+.button {
   max-width: 244px;
   margin-left: auto;
   margin-right: auto;
