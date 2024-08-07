@@ -104,7 +104,6 @@ const SiteHead: React.FC = () => {
         `}
             </Script>
 
-            <Script src="https://www.googletagmanager.com/gtag/js?id=G-ZFZLZ7KE6M" async defer strategy="lazyOnload" />
             <Script id="google-analytics" strategy="lazyOnload" async defer>
                 {`
        
