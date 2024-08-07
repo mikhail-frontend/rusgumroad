@@ -62,9 +62,8 @@
     width: 175px;
   }
   @media (max-width: 767px) {
-    width: 110px;
-    height: auto !important;
-
+    width: 226px;
+    height: 50px;
   }
 }
 
@@ -183,4 +182,10 @@
   left: 1px;
   background: rgb(255, 255, 255);
   box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.15);
+}
+
+.askBtn {
+  @media (max-width: 767px) {
+    margin-right: 75px;
+  }
 }

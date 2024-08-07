@@ -93,12 +93,13 @@ const MainHeader = () => {
                     </div>
                 </div>
                 <BurgerMenu onClick={buttonClickHandler}/>
-                <GumroadButton>
+                <GumroadButton className={`${styles.askBtn}`}>
                     Задать вопрос
                 </GumroadButton>
             </div>
         </header>
     );
 }
+
 
 export default MainHeader;

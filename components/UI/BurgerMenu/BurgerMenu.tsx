@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import {LinksList} from "../../MainHeader";
-import {Link} from "../../MainHeader";
+import {LinksList} from "../../MainHeader/MainHeader";
+import {Link} from "../../MainHeader/MainHeader";
 type BurgerMenuType = {
     onClick: (link: string, blockPath: string, event: React.MouseEvent<HTMLDivElement>) => void
 }

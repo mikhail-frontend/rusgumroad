@@ -1,6 +1,6 @@
 import React from 'react';
 import SiteHead from "../components/SiteHead";
-import MainHeader from "../components/MainHeader";
+import MainHeader from "../components/MainHeader/MainHeader";
 import MainFooter from "../components/MainFooter";
 import {useSelector} from "react-redux";
 import {RootState} from "../store";
