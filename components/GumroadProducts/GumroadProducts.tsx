@@ -21,7 +21,7 @@ const GumroadProducts = () => {
                     {gumroadProducts.map(product => {
                         return (
                             <li key={product.id}>
-                                <GumroadButton href={product.link} target="_blank" revert={true} rel="noopener noreferrer">
+                                <GumroadButton href={product.link} target="_blank" revert={true}>
                                     {product.text}
                                 </GumroadButton>
                             </li>
