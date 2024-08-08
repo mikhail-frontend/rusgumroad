@@ -1,4 +1,9 @@
-const products = [
+export type productType = {
+    id: number;
+    text: string;
+    link: string;
+}
+const products:productType[] = [
     {
         id: 1,
         text: '3D',

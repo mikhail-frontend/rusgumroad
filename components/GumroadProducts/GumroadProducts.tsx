@@ -1,20 +1,33 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import styles from './styles.module.scss';
 import products from "./products";
 import Image from "next/image";
-import {useSelector} from "react-redux";
-import {RootState} from "../../store";
+import { useSelector } from "react-redux";
+import { RootState } from "../../store";
+import type { productType } from "./products";
+import GumroadButton from "../UI/GumroadButton/GumroadButton";
 
 const GumroadProducts = () => {
-    const gumroadProducts = useState(products);
+    const [gumroadProducts] = useState<productType[]>(products);
     const theme = useSelector((state: RootState) => state.theme.mode);
     const isLight = theme === 'light';
     return (
         <section className={`${styles.products} container ${isLight ? styles.products_light : styles.products_dark}`}>
             <div className={`${styles.content}`}>
-                <h2 className={`${styles.heading}  ${isLight ? styles.heading_light : styles.heading_dark}`}>
+                <h2 className={`${styles.heading}`}>
                     Большой выбор цифровых продуктов и материалов не имеющих аналога
                 </h2>
+                <ul className={`${styles.list}`}>
+                    {gumroadProducts.map(product => {
+                        return (
+                            <li key={product.id}>
+                                <GumroadButton href={product.link} target="_blank" rel="noopener noreferrer">
+                                    {product.text}
+                                </GumroadButton>
+                            </li>
+                        )
+                    })}
+                </ul>
             </div>
             <div className={`${styles.imageWrap}`}>
                 <Image src='/handshake.svg'

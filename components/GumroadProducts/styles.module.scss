@@ -56,13 +56,19 @@
 }
 
 .heading {
-  &.heading_light {
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 34px;
+  text-align: left;
+  margin-bottom: 32px;
+}
 
-  }
+.list {
+  list-style: none;
+}
 
-  &.heading_dark {
+.product {
 
-  }
 }
 
 .imageWrap {
