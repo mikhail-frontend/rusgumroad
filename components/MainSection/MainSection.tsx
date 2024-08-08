@@ -1,8 +1,12 @@
 import React from 'react';
 import GumroadButton from "../UI/GumroadButton/GumroadButton";
 import styles from './styles.module.scss';
+import {useSelector} from "react-redux";
+import {RootState} from "../../store";
 
 const MainSection = () => {
+    const theme = useSelector((state: RootState) => state.theme.mode);
+
     return (
         <div className={`${styles.container}`}>
             <img src={'/mainScreen/coin1.webp'} alt={'RusGumroad'}
@@ -12,6 +16,7 @@ const MainSection = () => {
                  className={`${styles.coin} ${styles.coin2}`}
                  width={75} height={76}/>
             <img src={'/mainScreen/coin3.webp'} alt={'RusGumroad'}
+
                  className={`${styles.coin} ${styles.coin3}`}
                  width={124} height={131}/>
             <img src={'/mainScreen/coin4.webp'} alt={'RusGumroad'}
@@ -22,9 +27,11 @@ const MainSection = () => {
                  width={96} height={82}/>
             <section className={`${styles.main}`}>
                 <div className={`${styles.mainText}`}>
-                    Простой и удобный способ покупки продуктов <h1 className={`${styles.mainTitle}`}>Gumroad</h1>  в&nbsp;России
+                    Простой и удобный способ покупки продуктов <h1 className={`${styles.mainTitle}`}>Gumroad</h1> в&nbsp;России
                 </div>
-                <GumroadButton href={'https://gumroad.com/'} revert={true} className={`${styles.button}`}>
+                <GumroadButton href={'https://gumroad.com/'}
+                               revert={true}
+                               className={`${styles.button} ${theme === 'light' ? styles.button_revert : ''}`}>
                     Перейти на сайт GUMROAD
                 </GumroadButton>
             </section>
