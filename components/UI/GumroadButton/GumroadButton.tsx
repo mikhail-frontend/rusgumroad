@@ -10,11 +10,12 @@ const GumroadButton = ({
                            target = '_blank',
                            className = '',
                            revert = false,
+                           alwaysLight = false,
                            onClick = (_) => {
                            }, children
                        }) => {
     const theme = useSelector((state: RootState) => state.theme.mode);
-    const isLight = theme === 'light';
+    const isLight = theme === 'light' || alwaysLight;
     const clickHandler = (event) => {
         event.preventDefault();
         onClick(event);
