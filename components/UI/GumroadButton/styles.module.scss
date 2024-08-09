@@ -21,11 +21,20 @@
   box-shadow: 5px 5px 0 0 rgb(255, 144, 231);
   background: rgb(255, 255, 255);
   &.revert {
-    box-shadow: 5px 5px 0 0 #fff;
     background:rgb(255, 144, 231);
-    &:hover{
-      box-shadow: 0 0 0 0 #fff;
+    &.dark{
+      box-shadow: 5px 5px 0 0 #fff;
+      &:hover{
+        box-shadow: 0 0 0 0 #fff;
+      }
     }
+    &.light {
+      box-shadow: 5px 5px 0 0 #000;
+      &:hover{
+        box-shadow: 0 0 0 0 #000;
+      }
+    }
+
   }
 
   &:hover {

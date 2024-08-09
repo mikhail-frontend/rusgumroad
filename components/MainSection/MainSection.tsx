@@ -1,11 +1,9 @@
 import React from 'react';
 import GumroadButton from "../UI/GumroadButton/GumroadButton";
 import styles from './styles.module.scss';
-import {useSelector} from "react-redux";
-import {RootState} from "../../store";
 import useMobile from "../../hooks/useMobile";
+
 const MainSection = () => {
-    const theme = useSelector((state: RootState) => state.theme.mode);
     const isMobile = useMobile();
     return (
         <div className={`${styles.container}`}>
@@ -63,7 +61,7 @@ const MainSection = () => {
                 </div>
                 <GumroadButton href={'https://gumroad.com/'}
                                revert={true}
-                               className={`${styles.button} ${theme === 'light' ? styles.button_revert : ''}`}>
+                               className={`${styles.button}`}>
                     Перейти на сайт GUMROAD
                 </GumroadButton>
             </section>
