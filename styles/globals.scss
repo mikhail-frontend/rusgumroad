@@ -19,6 +19,7 @@ input,
 button,
 textarea {
   appearance: none;
+  outline: none !important;
 }
 
 * {

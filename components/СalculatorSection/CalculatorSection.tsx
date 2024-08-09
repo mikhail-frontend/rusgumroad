@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {useSelector} from "react-redux";
 import styles from './styles.module.scss';
 import {RootState} from "../../store";
+import buildPrice from "../../helpers/buildPrice";
 import GumroadButton from "../UI/GumroadButton/GumroadButton";
 import Ripple from "../UI/GumroadButton/Ripple";
 
@@ -11,7 +12,8 @@ const CalculatorSection = () => {
     const [amount, setAmount] = useState<number>(null);
     const [activeTab, setActiveTab] = useState('calculator');
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
+    const theme = useSelector((state: RootState) => state.theme.mode);
+    const isLight = theme === 'light';
     const defaultUsdRate = 100;
     const defaultEurRate = 110;
     const exchangeRate = currency === 'USD'
@@ -29,6 +31,14 @@ const CalculatorSection = () => {
         const price = Number(event.target.value) || 0;
         setAmount(price);
     };
+
+    const handleAmountBlur = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const price = Number(event.target.value) || 0;
+        if(price) return;
+        setAmount(null);
+    }
+
+    const setResultPrice = (price:number) => buildPrice(price)
 
     return (
         <section id='calculator' className={`${styles.calculatorSection} container`}>
@@ -57,7 +67,7 @@ const CalculatorSection = () => {
                     height={180}
                 />
             </div>
-            <div className={styles.calculatorContent}>
+            <div className={`${styles.calculatorContent} ${isLight ? styles.calculatorContent_light : styles.calculatorContent_dark}`}>
                 <div className={`${styles.tabs}`}>
                     <Ripple>
                         <button
@@ -88,6 +98,7 @@ const CalculatorSection = () => {
                                 type="number"
                                 value={amount}
                                 onChange={handleAmountChange}
+                                onBlur={handleAmountBlur}
                                 className={styles.inputField}
                                 placeholder="1000"
                             />
@@ -133,7 +144,7 @@ const CalculatorSection = () => {
                         <div className={styles.inputGroup}>
                             <div className={styles.currencyIcon}>₽</div>
                             <div className={styles.inputField}>
-                                {totalPrice.toFixed(0)}
+                                {setResultPrice(Number(totalPrice.toFixed(0)))}
                             </div>
                             <div className={styles.customDropdown}>
                                 <img src="/calculator/ru-flag.svg" alt="RUB" className={styles.flagIcon}/> RUB

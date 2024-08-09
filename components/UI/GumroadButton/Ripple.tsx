@@ -4,9 +4,10 @@ import styles from './ripple.module.scss';
 interface RippleProps {
     children: React.ReactNode;
     className?: string;
+    onClick?: (_:any) => void
 }
 
-const Ripple: React.FC<RippleProps> = ({ children, className = '',  onClick = (event = null) => {
+const Ripple: React.FC<RippleProps> = ({ children, className = '',  onClick = (_) => {
 }, }) => {
     const [ripples, setRipples] = useState<{ left: number; top: number }[]>([]);
 
