@@ -1,20 +1,20 @@
 const schema = {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    "name": "Как приобрести курс?",
+    "name": "Как оплатить GUMROAD?",
     "totalTime": "PT10M",
     "step": [
-
         {
             "@type": "HowToSection",
-            "name": "Выберите курс на сайте Udemy.com",
+            "name": "Выберите цифровой товар на сайте GUMROAD",
             "itemListElement": [
                 {
                     "@type": "HowToStep",
                     "position": "1",
-                    "image": "https://rusudemy.com/icons/icon-128x128.png",
-                    "text": "Скопируйте ссылку на&nbsp;курс, который хотите купить"
-                }],
+                    "image": " https://rusgumroad.web.app/1.svg",
+                    "text": "Скопируйте ссылку на цифровой товар, который хотите купить"
+                }
+            ],
             "position": "1"
         },
         {
@@ -25,25 +25,25 @@ const schema = {
                 {
                     "@type": "HowToStep",
                     "position": "1",
-
-                    "text": "Пришлите ссылку на курс и e-mail"
-                }],
-
+                    "image": " https://rusgumroad.web.app/2.svg",
+                    "text": "Пришлите ссылку на товар, а дальше будем действовать мы⚡️"
+                }
+            ],
             "position": "2"
         },
-
         {
             "@type": "HowToSection",
-            "name": "Приобретаем Вам курс",
+            "name": "Приобретаем Вам цифровой товар",
             "itemListElement": [
                 {
                     "@type": "HowToStep",
                     "position": "1",
-                    "text": "<strong>Предоплата не&nbsp;требуется</strong> Мы купим курс за Вас, вышлем подтверждение покупки и номер электронного кошелька для оплаты наших услуг.  После перевода средств вы получите доступ к курсу.",
-                }],
+                    "image": " https://rusgumroad.web.app/3.svg",
+                    "text": "Мы купим товар за Вас, вышлем подтверждение покупки и номер электронного кошелька для оплаты наших услуг.   После перевода средств вы получите доступ к&nbsp;товару."
+                }
+            ],
             "position": "3"
-        },
-
+        }
     ]
 }
 export default schema
