@@ -3,10 +3,10 @@ import GumroadButton from "../UI/GumroadButton/GumroadButton";
 import styles from './styles.module.scss';
 import {useSelector} from "react-redux";
 import {RootState} from "../../store";
-
+import useMobile from "../../hooks/useMobile";
 const MainSection = () => {
     const theme = useSelector((state: RootState) => state.theme.mode);
-
+    const isMobile = useMobile();
     return (
         <div className={`${styles.container}`}>
             <img src={'/mainScreen/coin1.webp'} alt={'RusGumroad'}
@@ -14,9 +14,9 @@ const MainSection = () => {
                  width={81} height={96}/>
             <img src={'/mainScreen/coin2.webp'} alt={'RusGumroad'}
                  className={`${styles.coin} ${styles.coin2}`}
+                 loading={isMobile ? 'lazy' : 'eager'}
                  width={75} height={76}/>
             <img src={'/mainScreen/coin3.webp'} alt={'RusGumroad'}
-
                  className={`${styles.coin} ${styles.coin3}`}
                  width={124} height={131}/>
             <img src={'/mainScreen/coin4.webp'} alt={'RusGumroad'}

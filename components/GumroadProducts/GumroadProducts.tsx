@@ -15,7 +15,7 @@ const GumroadProducts = () => {
         <section className={`${styles.products} container ${isLight ? styles.products_light : styles.products_dark}`}>
             <div className={`${styles.content}`}>
                 <h2 className={`${styles.heading}`}>
-                    Большой выбор цифровых продуктов и материалов не имеющих аналога
+                    Большой выбор цифровых продуктов и&nbsp;материалов не имеющих аналога
                 </h2>
                 <ul className={`${styles.list}`}>
                     {gumroadProducts.map(product => {

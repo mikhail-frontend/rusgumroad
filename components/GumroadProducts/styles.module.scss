@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch; /* Убедитесь, что элементы растягиваются по высоте родителя */
   padding: 0;
   border-radius: 12px;
   overflow: hidden;
@@ -29,7 +29,9 @@
       top: 330px;
     }
   }
-
+  @media (max-width: 1024px) {
+    min-height: 300px;
+  }
   @media (max-width: 1024px) {
     margin-bottom: 100px;
   }
@@ -50,9 +52,17 @@
     background: #fff;
   }
 }
-
 .content {
   padding: 52px 120px 52px 60px;
+  @media (max-width: 1101px) {
+    padding: 52px 65px 52px 40px;
+  }
+  @media (max-width: 1024px) {
+    padding: 24px 40px;
+  }
+  @media (max-width: 800px) {
+    padding: 24px;
+  }
 }
 
 .heading {
@@ -76,13 +86,20 @@
 }
 
 .imageWrap {
-  width: 391.49px;
+  flex: 1;
   min-width: 391.49px;
-  min-height: 395px;
-  height: 100%;
   background: rgb(255, 201, 0);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  @media (max-width: 1024px) {
+    min-width: 325px;
+    img {
+      max-width: 90%;
+    }
+  }
+  @media (max-width: 800px) {
+    display: none;
+  }
 }

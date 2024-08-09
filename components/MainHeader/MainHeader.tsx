@@ -89,7 +89,11 @@ const MainHeader = () => {
                 <div className={`${styles.headerSwitch} ${theme === 'light' ? styles.light : ''}`}
                      onClick={toggleTheme}>
                     <div className={`${styles.moon}`}>
-                        <img src={theme === 'light' ? sunIcon : moonIcon} alt={theme === 'light' ? 'sun' : 'moon'} />
+                        <img src={theme === 'light' ? sunIcon : moonIcon}
+                             alt={theme === 'light' ? 'sun' : 'moon'}
+                             width={theme === 'light' ? 18 : 11.370850}
+                             height={theme === 'light' ? 18 : 13.047363}
+                        />
                     </div>
                 </div>
                 <BurgerMenu onClick={buttonClickHandler}/>
