@@ -10,7 +10,6 @@ type LayoutType = {
 }
 
 const Layout: React.FC<LayoutType> = ({children}) => {
-    // const {usd, eur, status, error} = useSelector((state: RootState) => state.currency);
     const theme = useSelector((state: RootState) => state.theme.mode);
 
     return (

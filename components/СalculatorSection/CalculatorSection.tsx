@@ -1,6 +1,10 @@
 import React from 'react';
 import styles from './styles.module.scss';
+import {useSelector} from "react-redux";
+import {RootState} from "../../store";
 const CalculatorSection = () => {
+    const {usd, eur, status, error} = useSelector((state: RootState) => state.currency);
+    const theme = useSelector((state: RootState) => state.theme.mode);
     return (
         <section id='calculator' className={`${styles.calculatorSection} container`}>
             <img
