@@ -1,0 +1,9 @@
+<svg width="24.000000" height="16.000000" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<pattern id="pattern_1_41870" patternContentUnits="objectBoundingBox" width="1.000000" height="1.000000">
+			<use xlink:href="#image1_4187_0" transform="scale(0.020833 0.031250)"/>
+		</pattern>
+		<image id="image1_4187_0" width="48.000000" height="32.000000" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAgCAYAAABU1PscAAAABHNCSVQICAgIfAhkiAAAAFBJREFUWIXt1kENACAMBEGKAWwgANMoQs4hgseGZEdB93WtJGkf6/QBrwygGUAzgGYArdraLjHJAJoBNANoBtAMoNWZw1+IZADNAJoBNANoF2NECCPmltA7AAAAAElFTkSuQmCC"/>
+	</defs>
+	<rect id="Flag Image RUB" width="24.000000" height="16.000000" fill="url(#pattern_1_41870)" fill-opacity="1.000000"/>
+</svg>
