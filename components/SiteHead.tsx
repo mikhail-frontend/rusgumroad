@@ -46,16 +46,16 @@ const SiteHead: React.FC = () => {
     return (
         <>
             <Head>
-                <meta charSet="UTF-8" />
+                <meta charSet="UTF-8"/>
                 <title>RusGumroad title</title>
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name="robots" content="index, follow" />
-                <link rel="shortcut icon" type="image/png" href="/icons/apple-touch-icon-144x144.png" />
-                <link rel="icon" type="image/png" href="/icons/apple-touch-icon-144x144.png" />
+                <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                <meta name="robots" content="index, follow"/>
+                <link rel="shortcut icon" type="image/png" href="/icons/apple-touch-icon-144x144.png"/>
+                <link rel="icon" type="image/png" href="/icons/apple-touch-icon-144x144.png"/>
 
-                <meta data-rh="true" property="og:locale" content="ru_RU" />
-                <meta name="theme-color" content="#000212" />
-                <meta property="og:type" content="website" />
+                <meta data-rh="true" property="og:locale" content="ru_RU"/>
+                <meta name="theme-color" content="#000212"/>
+                <meta property="og:type" content="website"/>
                 <meta
                     name="description"
                     content="RusGumroad - описание"
@@ -78,19 +78,26 @@ const SiteHead: React.FC = () => {
                     property="og:title"
                     content="RusGumroad title"
                 />
-                <meta property="og:image" content="/logo-dark.jpeg" />
+                <meta property="og:image" content="/logo-dark.jpeg"/>
 
-                <link rel="canonical" href={`https://rusgumroad.web.app${pathname}`} />
-                <link rel="manifest" href="/manifest.json" />
-                <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-                <meta name="theme-color" content="#000212" />
-                <link rel="apple-touch-icon" href="/icons/apple-touch-icon-180x180.png" />
-                <link rel="apple-touch-icon" href="/icons/apple-touch-icon-57x57.png" sizes="57x57" />
-                <link rel="apple-touch-icon" href="/icons/apple-touch-icon-72x72.png" sizes="72x72" />
-                <link rel="apple-touch-icon" href="/icons/apple-touch-icon-114x114.png" sizes="114x114" />
-                <link rel="apple-touch-icon" href="/icons/apple-touch-icon-144x144.png" sizes="144x144" />
-                <link rel="apple-touch-icon" href="/icons/apple-touch-icon-152x152.png" sizes="152x152" />
-                <link rel="apple-touch-icon" href="/icons/apple-touch-icon-180x180.png" sizes="180x180" />
+                <link rel="canonical" href={`https://rusgumroad.web.app${pathname}`}/>
+                <link rel="manifest" href="/manifest.json"/>
+                <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
+                <meta name="theme-color" content="#000212"/>
+                <link rel="apple-touch-icon" href="/icons/apple-touch-icon-180x180.png"/>
+                <link rel="apple-touch-icon" href="/icons/apple-touch-icon-57x57.png" sizes="57x57"/>
+                <link rel="apple-touch-icon" href="/icons/apple-touch-icon-72x72.png" sizes="72x72"/>
+                <link rel="apple-touch-icon" href="/icons/apple-touch-icon-114x114.png" sizes="114x114"/>
+                <link rel="apple-touch-icon" href="/icons/apple-touch-icon-144x144.png" sizes="144x144"/>
+                <link rel="apple-touch-icon" href="/icons/apple-touch-icon-152x152.png" sizes="152x152"/>
+                <link rel="apple-touch-icon" href="/icons/apple-touch-icon-180x180.png" sizes="180x180"/>
+                <link rel="preload" href="/font/MabryPro-Bold.woff2" as="font" type="font/woff2"
+                      crossOrigin="anonymous"/>
+                <link rel="preload" href="/font/MabryPro-Medium.woff2" as="font" type="font/woff2"
+                      crossOrigin="anonymous"/>
+                <link rel="preload" href="/font/MabryPro-Regular.woff2" as="font" type="font/woff2"
+                      crossOrigin="anonymous"/>
+
                 <JsonLd<Organization>
                     item={organization as any}
                 />
