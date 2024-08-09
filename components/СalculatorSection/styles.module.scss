@@ -119,12 +119,8 @@
   border-radius: 0;
 }
 
-.currencySelect {
-  width: 106.2px;
-  height: 51.91px;
-  border-radius: 0;
-  background: #fff url('/calculator/arrow-down.svg') no-repeat right 10px center;
-  appearance: none;
+.toggleIcon{
+
 }
 
 .flagIcon {
@@ -164,7 +160,7 @@
   border: 1px solid #ddd;
   border-radius: 0;
   z-index: 10;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   animation: dropdownFadeIn 0.2s ease-in-out;
 }
 
