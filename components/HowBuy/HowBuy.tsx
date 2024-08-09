@@ -16,7 +16,6 @@ type howBuyStep = {
     title: string,
     text?: string
     hasButton?: boolean
-    additional?: string
     animated?: boolean
 }
 const howBuySteps: howBuyStep[] = [
@@ -39,7 +38,7 @@ const howBuySteps: howBuyStep[] = [
         id: 6,
         image: '/3.svg',
         imageDark: '/3-d.svg',
-        title: 'Приобретаем Вам цифровой товар ',
+        title: 'Приобретаем Вам цифровой&nbsp;товар ',
         text: `Мы купим товар за Вас, вышлем подтверждение покупки и номер электронного кошелька для оплаты наших услуг.
          После перевода средств вы получите доступ к&nbsp;товару.`
     },
@@ -57,7 +56,7 @@ const HowBuy = () => {
                     item={schema as any}
                 />
                 <div className={``}>
-                    <h2 className={`heading`}>
+                    <h2 className={`heading ${styles.heading}`}>
                         Как оплатить GUMROAD?
                     </h2>
                 </div>
@@ -65,12 +64,15 @@ const HowBuy = () => {
                     {
                         steps.map(step => {
                             return (
-                                <li key={step.id} className={`${styles.step} ${step.animated ? styles.active : ''}`}>
+                                <li key={step.id}
+                                    className={`${styles.step} ${step.animated ? styles.active : ''}
+                                     ${isLight ? styles.step_light : styles.step_dark}`}>
                                     <Image src={isLight ? step.image : step.imageDark}
                                            title="RusGumroad. Gumroad как купить. Gumroad как оплатить российской картой."
                                            alt='RusGumroad. Gumroad как купить. Gumroad как оплатить российской картой.'
                                            width={55} height={55} loading={'lazy'}/>
-                                    <h3 className={styles.stepTitle} dangerouslySetInnerHTML={{__html: step.title}}/>
+                                    <h3 className={`${styles.stepTitle} ${isLight ? styles.stepTitle_light : styles.stepTitle_dark}`}
+                                        dangerouslySetInnerHTML={{__html: step.title}}/>
                                     {!!step.hasButton &&
                                         <RippleButton to="https://t.me/rus_udemy" className={styles.telegramLink}
                                                       target='_blank'>
@@ -79,8 +81,6 @@ const HowBuy = () => {
                                         </RippleButton>}
                                     {!!step.text &&
                                         <p className={styles.stepText} dangerouslySetInnerHTML={{__html: step.text}}/>}
-                                    {!!step.additional && <p className={styles.additional}
-                                                             dangerouslySetInnerHTML={{__html: step.additional}}/>}
                                 </li>
                             )
                         })

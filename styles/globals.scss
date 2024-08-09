@@ -87,10 +87,13 @@ html, body {
   @media (max-width: 900px) {
     font-size: 40px;
   }
-  @media (max-width: 767px) {
-
+  @media (max-width: 600px) {
     font-size: 36px;
     line-height: 42px;
+  }
+  @media (max-width: 479px) {
+    font-size: 34px;
+    line-height: 46px;
   }
   @media (max-width: 380px) {
     font-size: 30px;
